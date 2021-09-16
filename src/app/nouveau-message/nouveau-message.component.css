@@ -1,0 +1,29 @@
+.div{
+  border : black solid 3px;
+  height : 100%;
+  font-size: 20px;
+}
+
+label{
+
+  margin-left: 5px;
+}
+
+.de{
+  height: 10%;
+  width : 95%;
+  margin : 10px;
+}
+
+.message{
+  height: 150px;
+  width : 95%;
+  margin : 10px;
+}
+
+.bouton{
+  display: flex;
+  justify-content: flex-end;
+  padding : 5px;
+  margin : 5px;
+}

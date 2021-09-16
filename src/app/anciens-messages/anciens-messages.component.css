@@ -1,0 +1,14 @@
+div{
+  border : black solid 3px;
+  height : 100%;
+  padding-right : 5%;
+  padding-left : 5%;
+  font-size: 20px;
+  overflow: scroll;
+}
+
+input{
+  height : 35px;
+  width : 90%;
+}
+

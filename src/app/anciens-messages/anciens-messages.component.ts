@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {Message} from "../modules/Message";
+import {Personne} from "../modules/Personne";
+import {MessageService} from "../services/message.service";
 
 @Component({
   selector: 'app-anciens-messages',
@@ -7,7 +10,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AnciensMessagesComponent implements OnInit {
 
-  constructor() { }
+  tabMessage : Array<Message>;
+
+
+  constructor(private svc: MessageService) {
+    this.tabMessage = this.svc.tabMessage;
+
+  }
 
   ngOnInit(): void {
   }

@@ -8,15 +8,25 @@
     "titre titre titre"
     "menu message message"
     "menu newmessage newmessage";
+}
 
+.titre {
+  grid-area: titre;
+  margin-bottom: 5px;
+}
+
+.menu {
+  grid-area: menu;
+}
+
+.message {
+  grid-area: message;
+  margin-bottom: 5px;
+  max-height : 200px;
 
 }
 
-.titre { grid-area: titre;  margin-bottom: 5px;}
-
-.menu { grid-area: menu; }
-
-.message { grid-area: message; margin-bottom: 5px; }
-
-.newMessage { grid-area: newmessage; }
+.newMessage {
+  grid-area: newmessage;
+}
 

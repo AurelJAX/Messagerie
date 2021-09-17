@@ -15,12 +15,11 @@ export class PersonnesActivesComponent implements OnInit {
 
   constructor(private svc: MessageService) {
     this.tabPersonne = [];
+    this.tabPersonne = this.svc.tabPersonne;
     this.tabMessage = [];
     this.tabMessage.forEach((t) => {
-      this.tabPersonne.push(t.personne);
+      this.tabPersonne.push(t.auteur);
     })
-
-
   }
 
   ngOnInit(): void {

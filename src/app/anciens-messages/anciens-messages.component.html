@@ -1,8 +1,15 @@
 
-<div *ngIf="tabMessage.length !== 0">
-  <span *ngFor="let chaqueMessage of tabMessage" >
-      <label > <a href="">{{chaqueMessage.personne.pseudo}}</a> a écrit le {{chaqueMessage.date |date : 'dd/MM/yyyy'}}</label><br>
-      <input type="text" height="150px" [value]="chaqueMessage.message"/><br>
-  </span>
+<div  id="listeMessage">
+
+
+  <div *ngIf="tabMessage.length !== 0">
+    <fieldset *ngFor="let chaqueMessage of tabMessage" >
+        <legend> <a href="">{{chaqueMessage.auteur.pseudo}}</a> a écrit le {{chaqueMessage.dateMessage |date : 'dd/MM/yyyy'}}</legend><br>
+        <p height="150px" >{{chaqueMessage.textMessage}}</p><br>
+    </fieldset>
+  </div>
+  <div *ngIf="tabMessage.length === 0">
+    <p>Aucun message</p>
+  </div>
 </div>
 

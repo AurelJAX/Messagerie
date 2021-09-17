@@ -1,25 +1,18 @@
 export class Personne{
-  private _id  : number;
-  private _pseudo : string;
+ /* private _id  : number;*/
+  pseudo : string;
 
-  constructor(id: number, pseudo: string) {
-    this._id = id;
-    this._pseudo = pseudo;
+  constructor(/*id: number,*/ pseudo: string) {
+   /* this._id = id;*/
+    this.pseudo = pseudo;
   }
 
-  get id(): number {
+  /*get id(): number {
     return this._id;
   }
 
   set id(value: number) {
     this._id = value;
-  }
+  }*/
 
-  get pseudo(): string {
-    return this._pseudo;
-  }
-
-  set pseudo(value: string) {
-    this._pseudo = value;
-  }
 }

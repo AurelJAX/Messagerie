@@ -1,4 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import {Message} from "../modules/Message";
+import {MessageService} from "../services/message.service";
+import {Personne} from "../modules/Personne";
+import {Observable} from "rxjs";
+import {HttpClient} from "@angular/common/http";
 
 @Component({
   selector: 'app-nouveau-message',
@@ -7,9 +12,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NouveauMessageComponent implements OnInit {
 
-  constructor() { }
+  constructor(private http : HttpClient) {
+
+  }
 
   ngOnInit(): void {
   }
+
+  public soummettreLeForm(message : Message) : Observable<any>{
+       return this.http.post("http://10.21.0.254:8080/", message);
+    }
+
 
 }

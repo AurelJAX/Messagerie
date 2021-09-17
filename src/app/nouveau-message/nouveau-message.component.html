@@ -4,17 +4,21 @@
 <h3>Nouveau message : </h3>
 
   <div>
-    <label >De : </label><br>
-    <input type="text" class="de"/><br>
-    <label>Message : </label><br>
-    <input type="text" class="message"/>
+    <form (ngSubmit)="soummettreLeForm(monFormulaire.value)" #monFormulaire="ngForm">
+      <label >De : </label><br>
+      <input type="text" name="de" class="de" ngModel>
+      <label >Message : </label><br>
+      <input type="text" name="message"  class="message"ngModel>
+      <div class="bouton">
+        <input type="submit" value="Valider" />
+        <input type="submit" value="Annuler" />
+      </div>
+
+    </form>
   </div>
 
-
-  <div class="bouton">
-    <input type="submit" value="Valider" />
-    <input type="submit" value="Annuler" />
-  </div>
-
+  <p>
+    {{monFormulaire.value | json}}
+  </p>
 
 </div>

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Message} from "../modules/Message";
-import {Personne} from "../modules/Personne";
+
 import {MessageService} from "../services/message.service";
 
 @Component({
@@ -12,10 +12,12 @@ export class AnciensMessagesComponent implements OnInit {
 
   tabMessage : Array<Message>;
 
-
   constructor(private svc: MessageService) {
-    this.tabMessage = this.svc.tabMessage;
-
+    this.tabMessage = [];
+    this.svc.appelMessage().subscribe(
+      (e) => {this.tabMessage = e; console.log(e)},
+      ()=> console.log("noooooooooooooooooon")
+    );
   }
 
   ngOnInit(): void {

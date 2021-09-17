@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {MessageService} from "../services/message.service";
+import {ChuckService} from "../services/chuck.service";
 
 @Component({
   selector: 'app-titre',
@@ -7,7 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TitreComponent implements OnInit {
 
-  constructor() { }
+  blague : String;
+
+  constructor(private chuckService : ChuckService) {
+    this.blague = "";
+    this.chuckService.appelAPI().subscribe(
+      (donnees) => this.blague = donnees.value,
+      () => console.log("Ca se passe mal")
+
+    );
+  }
 
   ngOnInit(): void {
   }

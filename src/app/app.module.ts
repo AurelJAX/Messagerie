@@ -6,6 +6,8 @@ import { TitreComponent } from './titre/titre.component';
 import { PersonnesActivesComponent } from './personnes-actives/personnes-actives.component';
 import { NouveauMessageComponent } from './nouveau-message/nouveau-message.component';
 import { AnciensMessagesComponent } from './anciens-messages/anciens-messages.component';
+import {HttpClientModule} from "@angular/common/http";
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -15,9 +17,11 @@ import { AnciensMessagesComponent } from './anciens-messages/anciens-messages.co
     NouveauMessageComponent,
     AnciensMessagesComponent
   ],
-  imports: [
-    BrowserModule
-  ],
+    imports: [
+        BrowserModule,
+        HttpClientModule,
+        FormsModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })
